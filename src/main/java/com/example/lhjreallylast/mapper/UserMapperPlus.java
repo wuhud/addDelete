@@ -35,4 +35,11 @@ public interface UserMapperPlus extends BaseMapper<User> {
      */
     @Select("SELECT * FROM user WHERE username LIKE CONCAT('%', #{username}, '%')")
     java.util.List<User> findUsersByUsernameLike(@Param("username") String username);
+
+
+    //mybatic plus具有内置的crud工具，主要是针对BaseMapper中的类进行增删改查，查找的时候则是
+    //SelectById Id是主键，删除也是根据主键
+    //在user当中可以添加@Tableid 表明主键
+
+
 }

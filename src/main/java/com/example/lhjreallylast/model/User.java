@@ -1,6 +1,12 @@
 package com.example.lhjreallylast.model;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
+
+@TableName("user")
 public class User {
+    @TableId(value = "id")
     private Integer id;
     private String username;
     private String password;
